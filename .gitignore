@@ -1,15 +1,43 @@
-# React (Create React App)
+# Node & Dependencies
+node_modules/
+dist/
+dist-ssr/
 build/
+*.local
+
+# Caches & Logs
 .eslintcache
 .parcel-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# VS Code
+# Playwright & Tests
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# VS Code & Editors
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Windows
 Thumbs.db
@@ -20,6 +48,3 @@ Desktop.ini
 $RECYCLE.BIN/
 *.lnk
 *.stackdump
-
-
-.env
