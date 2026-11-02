@@ -223,9 +223,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             setAuthMode('supabase');
             return { success: true };
           }
+
+          return {
+            success: false,
+            error: 'Credenciais inválidas. Verifique o e-mail e a senha informados.',
+          };
         }
 
-        // 2. Modo Desenvolvimento / Avaliação Local (Fallback determinístico)
+        // 2. Modo Desenvolvimento / Avaliação Local (quando Supabase não está configurado)
         const expectedEmail = getFallbackAdminEmail();
         const expectedPassword = getFallbackAdminPassword();
 
@@ -296,12 +301,4 @@ export function useAuth(): AuthContextValue {
     throw new Error('useAuth deve ser utilizado dentro de um AuthProvider');
   }
   return context;
-}
-
-// eslint-disable-next-line react-refresh/only-export-components
-export function getDemoAdminCredentials(): { email: string; password: string } {
-  return {
-    email: getFallbackAdminEmail(),
-    password: getFallbackAdminPassword(),
-  };
 }
