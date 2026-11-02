@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { AlertCircle, ArrowLeft, KeyRound, Lock, Mail, ShieldCheck, Terminal } from 'lucide-react';
-import { getDemoAdminCredentials, useAuth } from '../context/AuthContext';
+import { AlertCircle, ArrowLeft, KeyRound, Lock, Mail, ShieldCheck } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 import { isSupabaseConfigured } from '../services/supabaseClient';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
@@ -16,7 +16,6 @@ export const LoginPage: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const demoCredentials = getDemoAdminCredentials();
   const supabaseActive = isSupabaseConfigured();
 
   if (isAuthenticated) {
@@ -58,12 +57,6 @@ export const LoginPage: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const handleQuickFillDemo = () => {
-    setEmail(demoCredentials.email);
-    setPassword(demoCredentials.password);
-    setErrorMessage(null);
   };
 
   return (
@@ -123,7 +116,7 @@ export const LoginPage: React.FC = () => {
                   name="email"
                   type="email"
                   autoComplete="username"
-                  placeholder="admin@donizetti.dev"
+                  placeholder="seu.email@dominio.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -174,31 +167,6 @@ export const LoginPage: React.FC = () => {
               Entrar no Dashboard
             </Button>
           </form>
-
-          <div className={styles.demoBox}>
-            <div className={styles.demoHeader}>
-              <span className={styles.demoTitle}>
-                <Terminal size={14} aria-hidden="true" />
-                <span>Credenciais de Avaliação Local</span>
-              </span>
-              <button
-                type="button"
-                onClick={handleQuickFillDemo}
-                className={styles.quickFillBtn}
-                data-testid="login-demo-fill-button"
-              >
-                Preencher automaticamente
-              </button>
-            </div>
-            <div className={styles.demoCredentials}>
-              <span>
-                E-mail: <strong>{demoCredentials.email}</strong>
-              </span>
-              <span>
-                Senha: <strong>{demoCredentials.password}</strong>
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
