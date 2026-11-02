@@ -8,7 +8,7 @@ import type { ProfileData } from '../types';
 export const PROFILE_DATA: ProfileData = {
   name: 'Donizetti Batista',
   displayName: 'DONIZETTI BATISTA',
-  handle: 'Doni-zete',
+  handle: 'donizetti-dev',
   role: 'Analista de Automação RPA & Engenheiro de Software em Formação',
   headline: 'Engenharia de Automação RPA, Backend Python & Arquitetura Web',
   subheadline:
@@ -20,10 +20,10 @@ export const PROFILE_DATA: ProfileData = {
   ],
   availabilityText: 'Atuando na MV3 Tecnologia • Engenharia de Software @ FIAP',
   social: {
-    github: 'https://github.com/Doni-zete',
-    githubUsername: 'Doni-zete',
-    linkedin: 'https://www.linkedin.com/in/donizetti-junior-a52336195/',
-    email: 'contato@donizetti.dev',
+    github: 'https://github.com/donizetti-dev',
+    githubUsername: 'donizetti-dev',
+    linkedin: 'https://www.linkedin.com/in/donizetti-dev',
+    email: 'donizettibatista1@gmail.com',
     location: 'São Paulo, SP — Brasil',
   },
   metrics: [

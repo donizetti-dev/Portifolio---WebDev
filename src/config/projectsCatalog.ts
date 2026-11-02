@@ -27,7 +27,7 @@ export const CUSTOM_PROJECTS_CATALOG: ProjectCatalogEntry[] = [
     repoName: 'news-scraper-api',
     name: 'News Scraper API',
     shortDescription:
-      'API REST em Python e Flask para coleta automatizada via Selenium, persistência em SQL Server e disponibilização de notícias do portal G1.',
+      'API REST em Python e Flask para coleta automatizada de notícias do portal G1 com Selenium, persistência em SQL Server e busca textual.',
     description:
       'API backend desenvolvida para coletar, higienizar, armazenar e disponibilizar notícias do portal G1 de forma estruturada. Combina automação de navegador com Selenium para extração resiliente de conteúdo dinâmico, persistência relacional em Microsoft SQL Server via pyodbc e endpoints RESTful para listagem, busca textual por título e consulta individual.',
     problemStatement:
@@ -42,7 +42,7 @@ export const CUSTOM_PROJECTS_CATALOG: ProjectCatalogEntry[] = [
     topics: ['python', 'flask', 'selenium', 'sql-server', 'web-scraping', 'rest-api'],
     category: 'backend-api',
     status: 'completed',
-    repoUrl: 'https://github.com/Doni-zete',
+    repoUrl: 'https://github.com/donizetti-dev/news-scraper-api',
     updatedAt: '2025-02-15T14:30:00Z',
     featuredByDefault: true,
     highlights: [
@@ -54,7 +54,7 @@ export const CUSTOM_PROJECTS_CATALOG: ProjectCatalogEntry[] = [
   {
     id: 'catalog-trending-movies',
     slug: 'trending-movies',
-    repoName: 'trending-movies',
+    repoName: 'Trending_Movie-React',
     name: 'Trending Movies',
     shortDescription:
       'Aplicação web em React para exploração de filmes e séries em alta consumindo a API oficial do TMDB com Spec-Driven Development.',
@@ -72,7 +72,7 @@ export const CUSTOM_PROJECTS_CATALOG: ProjectCatalogEntry[] = [
     topics: ['react', 'javascript', 'tmdb-api', 'rest-api', 'spec-driven-development', 'vercel'],
     category: 'frontend-web',
     status: 'production',
-    repoUrl: 'https://github.com/Doni-zete',
+    repoUrl: 'https://github.com/donizetti-dev/Trending_Movie-React',
     homepageUrl: 'https://vercel.com',
     updatedAt: '2025-02-20T18:00:00Z',
     featuredByDefault: true,
@@ -83,93 +83,41 @@ export const CUSTOM_PROJECTS_CATALOG: ProjectCatalogEntry[] = [
     ],
   },
   {
-    id: 'catalog-infrawatch-fiap',
-    slug: 'infrawatch-fiap-global-solution',
-    repoName: 'infrawatch',
-    name: 'InfraWatch — FIAP Global Solution',
+    id: 'catalog-infrawatch-terminal',
+    slug: 'infrawatch-terminal',
+    repoName: 'Infrawatch-Terminal',
+    name: 'Terminal infrawatch',
     shortDescription:
-      'Sistema de monitoramento ambiental e análise de dados combinando telemetria de sensores e dados orbitais para prevenção de cenários de risco.',
+      'Interface de terminal (CLI) em Python para monitoramento ambiental e análise de risco correlacionando telemetria e sensores (FIAP Global Solution).',
     description:
-      'Projeto acadêmico desenvolvido na Global Solution de Engenharia de Software da FIAP, focado no monitoramento preventivo de condições ambientais e infraestrutura crítica. A solução processa e correlaciona séries de dados provenientes de sensores terrestres e leituras orbitais em Python, gerando indicadores analíticos para apoio à tomada de decisão em cenários de risco climático.',
+      'Aplicação de linha de comando (CLI/Terminal) desenvolvida em Python para o sistema InfraWatch no âmbito da Global Solution de Engenharia de Software da FIAP. Focada no monitoramento preventivo de condições ambientais e infraestrutura crítica, a ferramenta processa dados de telemetria e sensores diretamente no console, calculando limiares de risco e gerando alertas analíticos para apoio à tomada de decisão.',
     problemStatement:
-      'A ausência de correlação unificada entre leituras locais de sensores e indicadores ambientais macro dificulta a detecção precoce de anomalias e riscos em infraestruturas urbanas e ambientais.',
+      'Operadores técnicos e sistemas de monitoramento em campo necessitam de interfaces de console leves, resilientes e de rápida execução para acompanhar métricas de sensores e limiares de alerta ambiental sem dependência de navegadores ou ambientes gráficos.',
     architectureDecisions: [
-      'Pipeline modular em Python para ingestão, limpeza (data cleansing) e normalização de múltiplas fontes de dados.',
-      'Cálculo automatizado de limiares de alerta e consolidação de métricas estatísticas para identificação rápida de anomalias.',
-      'Estruturação de relatórios analíticos reprodutíveis e exportáveis para integração com painéis de monitoramento.',
+      'Implementação orientada a CLI / Terminal em Python para execução leve, portátil e de baixo consumo de recursos.',
+      'Módulo de processamento e normalização de dados de sensores terrestres e indicadores orbitais.',
+      'Formatação estruturada no terminal com cálculo determinístico de limiares de alerta e relatórios de risco.',
     ],
     language: 'Python',
-    stack: ['Python', 'Pandas', 'Processamento de Dados', 'SQL', 'Análise Ambiental'],
-    topics: ['python', 'data-analysis', 'fiap', 'global-solution', 'environmental-monitoring'],
+    stack: ['Python', 'CLI', 'Terminal', 'Processamento de Dados', 'Análise Ambiental'],
+    topics: [
+      'python',
+      'cli',
+      'terminal',
+      'infrawatch',
+      'fiap',
+      'global-solution',
+      'environmental-monitoring',
+    ],
     category: 'data-engineering',
     status: 'academic',
-    repoUrl: 'https://github.com/Doni-zete',
+    repoUrl: 'https://github.com/donizetti-dev/Infrawatch-Terminal',
     updatedAt: '2025-01-28T11:15:00Z',
     featuredByDefault: true,
     highlights: [
-      'Projeto oficial FIAP Global Solution — Engenharia de Software',
-      'Fusão de dados de sensores e indicadores orbitais em Python',
-      'Modelagem analítica voltada à mitigação de cenários de risco',
-    ],
-  },
-  {
-    id: 'catalog-portifolio-webdev',
-    slug: 'portifolio-webdev',
-    repoName: 'Portifolio---WebDev',
-    name: 'Portfólio Engenharia RPA & WebDev',
-    shortDescription:
-      'Aplicação SPA Monochrome High-Contrast em React 18, TypeScript, TanStack Query e Supabase com integração GitHub REST API e Dashboard Admin.',
-    description:
-      'Plataforma de portfólio profissional projetada com estética Monochrome High-Contrast + Electric Accent, combinando geometria 3D procedural leve em Canvas HTML5, consumo inteligente da API do GitHub com cache em memória via TanStack Query e camada de persistência híbrida (Supabase + Fallback automático em localStorage) para gestão de mensagens e curadoria de destaques.',
-    problemStatement:
-      'Portfólios estáticos exigem retrabalho constante de código para atualizar repositórios e não oferecem canal direto de gerenciamento de mensagens ou seleção dinâmica de projetos em destaque.',
-    architectureDecisions: [
-      'Gerenciamento de estado assíncrono com TanStack Query (staleTime de 10 minutos) + cache de contingência para eliminar chamadas repetidas à API do GitHub.',
-      'Padrão Data Service Híbrido: opera conectando ao Supabase PostgreSQL quando configurado ou alterna de forma transparente para localStorage sem quebrar funcionalidades.',
-      'Code-splitting via React.lazy para a rota administrativa (/dashboard) e para o componente Canvas 3D, assegurando alta performance mobile.',
-    ],
-    language: 'TypeScript',
-    stack: ['React 18', 'TypeScript', 'Vite', 'TanStack Query', 'Supabase', 'Playwright'],
-    topics: ['react', 'typescript', 'tanstack-query', 'supabase', 'playwright', 'portfolio'],
-    category: 'fullstack',
-    status: 'production',
-    repoUrl: 'https://github.com/Doni-zete/Portifolio---WebDev',
-    updatedAt: '2025-03-01T10:00:00Z',
-    featuredByDefault: true,
-    highlights: [
-      'Design System Monochrome High-Contrast com Dark e Light Mode persistidos',
-      'Integração híbrida GitHub API + Catálogo Extensível + Supabase',
-      'Cobertura de testes E2E automatizados com Playwright',
-    ],
-  },
-  {
-    id: 'catalog-docflow-rpa-pipeline',
-    slug: 'docflow-rpa-pipeline',
-    repoName: 'docflow-rpa-pipeline',
-    name: 'DocFlow ETL — Automação de Documentos & SQL',
-    shortDescription:
-      'Toolkit de engenharia em Python para extração automatizada de tabelas em PDFs e planilhas Excel com validação Pydantic e carga SQL.',
-    description:
-      'Solução de automação e processamento de documentos corporativos construída em Python, unindo PDFPlumber, OpenPyXL e Pandas para extrair tabelas complexas de arquivos PDF e planilhas operacionais. Aplica higienização determinística, validação de contratos de dados com Pydantic e persistência transacional em bancos relacionais.',
-    problemStatement:
-      'Processos financeiros e operacionais frequentemente dependem da digitação manual de dados contidos em centenas de documentos PDF e planilhas heterogêneas, gerando gargalos e erros humanos.',
-    architectureDecisions: [
-      'Extração especializada em duas camadas: PDFPlumber para documentos estruturados em PDF e OpenPyXL para manipulação avançada de workbooks Excel.',
-      'Transformação e normalização tabular com Pandas aliada à validação estrita de tipos via Pydantic antes da persistência.',
-      'Arquitetura extensível pronta para execução agendada via PowerShell ou orquestradores RPA.',
-    ],
-    language: 'Python',
-    stack: ['Python', 'PDFPlumber', 'OpenPyXL', 'Pandas', 'Pydantic', 'SQL Server'],
-    topics: ['python', 'rpa', 'etl', 'pdfplumber', 'openpyxl', 'pandas', 'sql-server'],
-    category: 'automation-rpa',
-    status: 'completed',
-    repoUrl: 'https://github.com/Doni-zete',
-    updatedAt: '2025-02-05T09:45:00Z',
-    featuredByDefault: false,
-    highlights: [
-      'Parsing automatizado de relatórios PDF e planilhas Excel complexas',
-      'Validação de integridade de dados com Pydantic e transformação com Pandas',
-      'Pronto para integração com fluxos de RPA e bancos SQL',
+      'Interface de terminal (CLI) em Python para monitoramento de telemetria',
+      'Projeto acadêmico oficial FIAP Global Solution — Engenharia de Software',
+      'Cálculo de limiares de alerta e análise de cenários de risco',
     ],
   },
 ];
