@@ -1,0 +1,38 @@
+.toggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  background-color: var(--surface-glass);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.toggleButton:hover {
+  border-color: var(--border-strong);
+  background-color: var(--surface-glass-hover);
+  box-shadow: var(--glow-hover);
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .label {
+    display: none;
+  }
+
+  .toggleButton {
+    padding: 0.48rem;
+  }
+}
