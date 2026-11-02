@@ -11,7 +11,7 @@ import type {
   ProjectCategory,
 } from '../types';
 
-const DEFAULT_GITHUB_USERNAME = 'Doni-zete';
+const DEFAULT_GITHUB_USERNAME = 'donizetti-dev';
 const SESSION_CACHE_KEY = 'donizetti_portfolio_github_repos_cache_v1';
 
 export class GitHubApiError extends Error {
@@ -28,7 +28,7 @@ export class GitHubApiError extends Error {
 
 /**
  * Obtém o username configurado via variável de ambiente `VITE_GITHUB_USERNAME`
- * com fallback seguro para `Doni-zete`.
+ * com fallback seguro para `donizetti-dev`.
  */
 export function getGitHubUsername(): string {
   const envUser = import.meta.env.VITE_GITHUB_USERNAME;
@@ -41,7 +41,10 @@ export function getGitHubUsername(): string {
 /**
  * Infere a categoria técnica de um repositório do GitHub com base na linguagem e tópicos.
  */
-function inferCategoryFromRepo(language: string | null, topics: string[] = []): ProjectCategory {
+export function inferCategoryFromRepo(
+  language: string | null,
+  topics: string[] = []
+): ProjectCategory {
   const normalizedLang = (language || '').toLowerCase();
   const normalizedTopics = topics.map((t) => t.toLowerCase());
 
@@ -122,7 +125,7 @@ function createEnrichedFromCatalog(
  * Converte um repositório público do GitHub que não está no catálogo manual
  * em um `EnrichedProject` completo para exibição automática nos cards e na página de detalhe.
  */
-function createEnrichedFromGitHubRepo(
+export function createEnrichedFromGitHubRepo(
   repo: GitHubRepoResponse,
   featuredSlugs: string[] = DEFAULT_FEATURED_PROJECT_SLUGS
 ): EnrichedProject {
@@ -207,9 +210,8 @@ export function mergeGitHubWithCatalog(
     if (catalogMatch) {
       matchedCatalogSlugs.add(catalogMatch.slug);
       enrichedFromGitHub.push(createEnrichedFromCatalog(catalogMatch, repo, featuredSlugs));
-    } else if (!repo.fork) {
-      enrichedFromGitHub.push(createEnrichedFromGitHubRepo(repo, featuredSlugs));
     }
+    // Restrição estrita (R2): apenas os 3 projetos reais aprovados no catálogo são exibidos
   }
 
   const remainingCatalogProjects = CUSTOM_PROJECTS_CATALOG.filter(
