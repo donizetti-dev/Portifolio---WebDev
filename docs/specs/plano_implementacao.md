@@ -10,7 +10,7 @@
 ---
 
 ## Feature 1 — Setup Base, Tooling, Tema Claro/Escuro e Design System
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **RF09 (Tema Claro/Escuro):** Seção `2.1` (linha 42) e Matriz `Req 6` (linha 283).
   * **RNF01 & RNF02 (Paleta Monochrome High-Contrast, Fontes e HTML Semântico):** Seção `2.2` (linhas 45–48) e Matriz `Front-End 1, 2` (linha 289).
@@ -24,7 +24,7 @@
 ---
 
 ## Feature 2 — Camada de Dados, Catálogo Extensível e Integração GitHub/Supabase
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **Objetivos e Curadoria (MV3 + FIAP, sem IA Generativa):** Seção `1.1` e `1.2` (linhas 10–15) + [sobre_mim.md](file:///c:/VS_Doni/PORTIFOLIO/Portifolio---WebDev/docs/referencias/sobre_mim.md) (linhas 1–15, 21–85).
   * **RF01 (GitHub API + Catálogo Extensível):** Seção `2.1` (linha 23), Seção `5` (item 3 — linha 108) e Seção `7.1` (linhas 177–195).
@@ -38,7 +38,7 @@
 ---
 
 ## Feature 3 — Home Page, Detalhe 3D Leve e Seções Principais (Hero, MV3/Skills, Projetos)
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **RF04 (Estados de Loading/Skeleton, Erro e Vazio):** Seção `2.1` (linha 28) e Matriz `Req 2` (linha 279).
   * **RNF03 & RNF04 (Elemento 3D Leve, Spotlight, Split Effect, Tilt e Performance):** Seção `2.2` (linhas 49–58), Seção `10` (linhas 241–249) e Matriz `Req 7, Req 8, Front-End 3` (linhas 284–285, 289).
@@ -52,7 +52,7 @@
 ---
 
 ## Feature 4 — Rotas Dinâmicas de Projetos (`/portifolio/:slug`), 404 Amigável e Formulário de Contato
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **RF02 (Página Individual do Projeto sem README):** Seção `2.1` (linha 24) e Seção `3` (linha 71).
   * **RF03 (Página 404 Amigável e Erro de API):** Seção `2.1` (linhas 25–27) e Seção `3` (linha 74).
@@ -65,7 +65,7 @@
 ---
 
 ## Feature 5 — Autenticação e Dashboard Administrativo (`/login` e `/dashboard`)
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **RF06, RF07, RF08 (Login, Proteção de Rota, Gestão de Mensagens e Seleção de Destaques):** Seção `2.1` (linhas 36–41) e Seção `3` (linhas 72–73).
   * **Fluxo e Segurança de Autenticação:** Seção `4` (linhas 96–99) e Seção `8` (linhas 216–223).
@@ -78,7 +78,7 @@
 ---
 
 ## Feature 6 — Testes E2E (Playwright), Auditoria de Performance e Documentação Final
-* **Status:** `[ ] Pendente`
+* **Status:** `[x] Concluída`
 * **Onde encontrar a Spec em `especificacao_geral.md`:**
   * **Estratégia de Testes Automatizados (Playwright):** Seção `2.2` (`RNF05` — linha 60), Seção `9` (linhas 226–238) e Matriz `Req 9` (linha 286).
   * **Critérios de Desempenho e Padronização (README):** Seção `10` (linhas 241–249) e Matriz `Req 8, Req 10` (linhas 285, 287).
