@@ -1,0 +1,79 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  aspect-ratio: 1 / 1;
+  max-width: 480px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 50% 50%, var(--accent-electric-soft), transparent 68%),
+    var(--surface-glass);
+  border: 1px solid var(--border-default);
+  backdrop-filter: blur(var(--backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--backdrop-blur));
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  transform: translateZ(0);
+}
+
+.hudTop,
+.hudBottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.statusDot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-secondary);
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #00ff87;
+  box-shadow: 0 0 10px rgba(0, 255, 135, 0.75);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: grab;
+}
+
+.canvas:active {
+  cursor: grabbing;
+}
+
+.cornerMark {
+  color: var(--accent-electric);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: 290px;
+    max-width: 380px;
+    padding: 1rem;
+  }
+}
