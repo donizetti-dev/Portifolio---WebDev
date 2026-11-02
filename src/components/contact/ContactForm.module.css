@@ -1,0 +1,197 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.fieldsRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.requiredMark {
+  color: var(--accent-electric);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  background-color: var(--surface-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent-electric);
+  background-color: var(--bg-elevated);
+  box-shadow: 0 0 0 3px var(--accent-electric-soft);
+}
+
+.input:disabled,
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 112px;
+}
+
+.inputError {
+  border-color: var(--status-danger);
+}
+
+.inputError:focus {
+  border-color: var(--status-danger);
+  box-shadow: 0 0 0 3px var(--status-danger-soft);
+}
+
+.charCounter {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--surface-subtle);
+  color: var(--text-secondary);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.counterValid {
+  color: var(--status-success);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.counterInvalid {
+  color: var(--status-danger);
+  border-color: var(--status-danger);
+  background-color: var(--status-danger-soft);
+}
+
+.messageFooterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 1.25rem;
+}
+
+.fieldError {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--status-danger);
+  line-height: 1.4;
+}
+
+.fieldHint {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.25rem;
+}
+
+.successBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--status-success);
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--text-primary);
+}
+
+.bannerIcon {
+  color: var(--status-success);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.bannerTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bannerTitle {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--text-primary);
+}
+
+.bannerDescription {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.errorBanner {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--status-danger);
+  background-color: var(--status-danger-soft);
+  color: var(--status-danger);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .fieldsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .submitRow button {
+    width: 100%;
+  }
+}
