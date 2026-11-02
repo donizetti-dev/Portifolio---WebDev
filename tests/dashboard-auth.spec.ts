@@ -92,16 +92,20 @@ test.describe('Suíte 2 — Segurança do Dashboard, Autenticação e Rotas (RF0
     await expect(toggleImportantBtn).toHaveAttribute('aria-pressed', 'true');
     await expect(page.getByTestId('stat-important-messages')).toHaveText('3');
 
-    // Valida alternância de projeto em destaque na Home
+    // Valida alternância de projeto em destaque na Home (3 projetos reais no catálogo, todos destacados inicialmente)
     const featuredList = page.getByTestId('featured-projects-list');
     await expect(featuredList).toBeVisible();
-    await expect(page.getByTestId('stat-featured-projects')).toHaveText('4');
+    await expect(page.getByTestId('stat-featured-projects')).toHaveText('3');
 
-    const toggleDocflowFeatured = page.getByTestId('toggle-featured-docflow-rpa-pipeline');
-    await expect(toggleDocflowFeatured).toHaveAttribute('aria-pressed', 'false');
-    await toggleDocflowFeatured.click();
-    await expect(toggleDocflowFeatured).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.getByTestId('stat-featured-projects')).toHaveText('5');
+    const toggleInfrawatchFeatured = page.getByTestId('toggle-featured-infrawatch-terminal');
+    await expect(toggleInfrawatchFeatured).toHaveAttribute('aria-pressed', 'true');
+    await toggleInfrawatchFeatured.click();
+    await expect(toggleInfrawatchFeatured).toHaveAttribute('aria-pressed', 'false');
+    await expect(page.getByTestId('stat-featured-projects')).toHaveText('2');
+
+    await toggleInfrawatchFeatured.click();
+    await expect(toggleInfrawatchFeatured).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('stat-featured-projects')).toHaveText('3');
   });
 
   test('4. Deve exibir página 404 amigável ao navegar para uma rota inexistente', async ({
